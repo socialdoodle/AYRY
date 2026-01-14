@@ -1,20 +1,54 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Are You Rekt Yet? (AYRY)
 
-# Run and deploy your AI Studio app
+**A viral, memetic daily sentiment ritual for the crypto market.**
 
-This contains everything you need to run your app locally.
+AYRY is a decentralized "confessional" app where users track their daily trading performance (Up, Down, Flat) and behavior (Held, Traded, Out).
 
-View your app in AI Studio: https://ai.studio/apps/drive/1szBmdLbM0B0dFC1z1nKdXICzrrEH2X7b
+Powered by **Google Gemini AI**, the "Chain Oracle" generates unique, roasting, or encouraging blessings based on your daily status.
 
-## Run Locally
+## ⚡ Features
 
-**Prerequisites:**  Node.js
+- **Daily Ritual**: One entry per day, aligned with Singapore Time (SGT).
+- **AI Oracle**: Dynamic, slang-heavy crypto commentary powered by Gemini.
+- **Global Consensus**: See real-time stats of how the market is feeling (Rekt vs. Printing).
+- **Shareable Identity**: Generate a daily "Designation" (e.g., "Diamond Hand God", "Rekt Gambler").
 
+## 🛠 Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Framework**: React 19 + Vite
+- **Styling**: Tailwind CSS + Lucide Icons
+- **AI**: Google GenAI SDK
+- **Charts**: Recharts
+- **Storage**: LocalStorage (MVP)
+
+## 🚀 Getting Started
+
+1.  **Clone the repo**
+    ```bash
+    git clone https://github.com/socialdoodle/AYRY.git
+    cd AYRY
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Setup Environment**
+    Create a `.env` file in the root (do not commit this file):
+    ```env
+    API_KEY=your_google_gemini_api_key_here
+    ```
+
+4.  **Run Locally**
+    ```bash
+    npm run dev
+    ```
+
+## 🌍 Deployment
+
+This project is optimized for **Vercel**.
+
+1.  Import this repository to Vercel.
+2.  Add your `API_KEY` in the Vercel **Environment Variables** settings.
+3.  Deploy!
