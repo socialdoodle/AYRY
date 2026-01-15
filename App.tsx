@@ -47,17 +47,37 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-crypto-dark text-crypto-text flex flex-col font-mono selection:bg-crypto-accent selection:text-black">
       
       {/* Header */}
-      <header className="p-6 border-b border-crypto-dim/20 flex flex-col items-center justify-center relative bg-crypto-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <h1 className="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white">
-          <span className="text-crypto-rekt">ARE YOU</span> <span className="text-crypto-accent">REKT YET?</span>
-        </h1>
-        <div className="flex items-center gap-2 text-[10px] md:text-xs text-crypto-dim uppercase mt-1 tracking-widest">
-          <span>Daily Ritual</span>
-          <span className="text-crypto-accent">•</span>
-          <span>SGT Zone</span>
-          <span className="text-crypto-accent">•</span>
-          <span>2026 Cycle</span>
+      <header className="px-4 py-3 md:p-6 border-b border-crypto-dim/20 flex items-center justify-between relative bg-crypto-card/50 backdrop-blur-sm sticky top-0 z-50 h-[80px] md:h-auto">
+        
+        {/* Left: Logo */}
+        <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-14 md:h-14">
+          <img 
+            src="/logo.png" 
+            alt="AYRY Logo" 
+            className="w-full h-full object-contain drop-shadow-[0_0_8px_rgba(0,255,157,0.3)]"
+            onError={(e) => {
+              // Fallback if image missing - simple text placeholder or hide
+              e.currentTarget.style.display = 'none';
+            }}
+          />
         </div>
+
+        {/* Center: Title */}
+        <div className="flex flex-col items-center justify-center flex-grow mx-2">
+          <h1 className="text-xl md:text-3xl font-black uppercase tracking-tighter text-white text-center leading-none">
+            <span className="text-crypto-rekt">ARE YOU</span> <span className="text-crypto-accent">REKT YET?</span>
+          </h1>
+          <div className="flex items-center gap-2 text-[10px] md:text-xs text-crypto-dim uppercase mt-1 tracking-widest hidden sm:flex">
+            <span>Daily Ritual</span>
+            <span className="text-crypto-accent">•</span>
+            <span>SGT Zone</span>
+            <span className="text-crypto-accent">•</span>
+            <span>2026 Cycle</span>
+          </div>
+        </div>
+
+        {/* Right: Spacer for balance (matches logo width) */}
+        <div className="w-10 md:w-14 flex-shrink-0 hidden sm:block"></div>
       </header>
 
       {/* Main Content */}
